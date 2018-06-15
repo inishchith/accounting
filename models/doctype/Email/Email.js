@@ -2,7 +2,7 @@ module.exports = {
     "name": "Email",
     "doctype": "DocType",
     "isSingle": 0,
-    "isChild": 0,   
+    "isChild": 0,
     "keywordFields": ["name"],
     "fields": [
         {
@@ -14,13 +14,14 @@ module.exports = {
         },
         {
         	// TODO : set this to default Outgoing
-            "fieldname": "from_emailAddress",
+            "fieldname": "fromEmailAddress",
             "label": "From",
-            "fieldtype": "Data",
+            "fieldtype": "Link",
+            "target": "EmailAccount",
             "required": 1
         },
         {
-            "fieldname": "to_emailAddress",
+            "fieldname": "toEmailAddress",
             "label": "To",
             "fieldtype": "Data",
             "required": 1
@@ -50,12 +51,12 @@ module.exports = {
           	"fieldtype" : "Text",
           	"required": 0
         },
-        { 
+        {
           	"fieldname": "bodyText",
           	"label": "Body",
           	"fieldtype" : "Text",
           	"required": 0
-        }, 
+        },
         {
         	"fieldname": "bodyHtml",
         	"label":"BodyHtml",
